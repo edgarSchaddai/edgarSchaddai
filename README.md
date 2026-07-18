@@ -21,10 +21,10 @@ Trabajo en la intersección de la robótica, la visión por computadora y el apr
 
 ## Estadísticas
 
-<p>
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=edgarSchaddai&show_icons=true&count_private=true&hide_border=true&theme=transparent&locale=es" alt="Estadísticas de GitHub" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=edgarSchaddai&layout=compact&hide_border=true&theme=transparent&langs_count=8&locale=es" alt="Lenguajes más usados" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img src="assets/stats-light.svg" alt="Estadísticas de GitHub: 177 contribuciones en el último año, 171 commits, 7 repositorios. Lenguajes principales ponderados por proyecto: Jupyter Notebook, TeX, C, JavaScript, CSS, Python, HTML y Svelte." width="840">
+</picture>
 
 ---
 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: 177 contribuciones en el último año, 171 commits, 7 repositorios. Lenguajes ponderados por repositorio.">
+  <title>Estadísticas de GitHub de Edgar Schaddaí</title>
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .title { font-size: 13px; font-weight: 600; fill: #0b0b0b; }
+    .label { font-size: 12px; fill: #898781; }
+    .value { font-size: 26px; font-weight: 600; fill: #0b0b0b; }
+    .lang  { font-size: 11px; fill: #52514e; }
+    .pct   { font-size: 11px; fill: #52514e; }
+    .note  { font-size: 11px; fill: #898781; }
+  </style>
+
+  <rect x="0.5" y="0.5" width="839" height="247" rx="6" fill="#fcfcfb" stroke="rgba(11,11,11,0.10)"/>
+
+  <text class="title" x="28" y="36">Actividad</text>
+  <text class="label" x="28" y="72">Contribuciones · último año</text>
+  <text class="value" x="28" y="100">177</text>
+  <text class="label" x="28" y="138">Commits</text>
+  <text class="value" x="28" y="166">171</text>
+  <text class="label" x="28" y="204">Repositorios</text>
+  <text class="value" x="28" y="230">7</text>
+
+  <line x1="280.5" y1="28" x2="280.5" y2="228" stroke="#e1e0d9" stroke-width="1"/>
+
+  <text class="title" x="310" y="36">Lenguajes por proyecto</text>
+  <text class="note" x="310" y="54">Ponderado por repositorio · incluye repositorios privados</text>
+
+  <text class="lang" x="418" y="86" text-anchor="end">Jupyter Notebook</text>
+  <path fill="#2a78d6" d="M430,76 h296 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-296 z"/>
+  <text class="pct" x="738" y="86">16.7%</text>
+
+  <text class="lang" x="418" y="106" text-anchor="end">TeX</text>
+  <path fill="#2a78d6" d="M430,96 h296 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-296 z"/>
+  <text class="pct" x="738" y="106">16.7%</text>
+
+  <text class="lang" x="418" y="126" text-anchor="end">C</text>
+  <path fill="#2a78d6" d="M430,116 h267 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-267 z"/>
+  <text class="pct" x="709" y="126">15.1%</text>
+
+  <text class="lang" x="418" y="146" text-anchor="end">JavaScript</text>
+  <path fill="#2a78d6" d="M430,136 h246 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-246 z"/>
+  <text class="pct" x="688" y="146">13.9%</text>
+
+  <text class="lang" x="418" y="166" text-anchor="end">CSS</text>
+  <path fill="#2a78d6" d="M430,156 h215 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-215 z"/>
+  <text class="pct" x="657" y="166">12.2%</text>
+
+  <text class="lang" x="418" y="186" text-anchor="end">Python</text>
+  <path fill="#2a78d6" d="M430,176 h177 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-177 z"/>
+  <text class="pct" x="619" y="186">10.1%</text>
+
+  <text class="lang" x="418" y="206" text-anchor="end">HTML</text>
+  <path fill="#2a78d6" d="M430,196 h138 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-138 z"/>
+  <text class="pct" x="580" y="206">7.9%</text>
+
+  <text class="lang" x="418" y="226" text-anchor="end">Svelte</text>
+  <path fill="#2a78d6" d="M430,216 h97 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-97 z"/>
+  <text class="pct" x="539" y="226">5.6%</text>
+</svg>
