@@ -23,7 +23,7 @@ Trabajo en la intersección de la robótica, la visión por computadora y el apr
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <img src="assets/stats-light.svg" alt="Estadísticas de GitHub: 177 contribuciones en el último año, 171 commits, 7 repositorios. Lenguajes principales ponderados por proyecto: Jupyter Notebook, TeX, C, JavaScript, CSS, Python, HTML y Svelte." width="840">
+  <img src="assets/stats-light.svg" alt="Estadísticas de GitHub actualizadas automáticamente: contribuciones del último año, commits, repositorios y lenguajes principales ponderados por proyecto." width="840">
 </picture>
 
 ---
