@@ -28,4 +28,4 @@ Trabajo en la intersección de la robótica, la visión por computadora y el apr
 
 ---
 
-📫 Contacto: [LM21070020@jerez.tecnm.mx](mailto:LM21070020@jerez.tecnm.mx) · [GitHub](https://github.com/edgarSchaddai)
+📫 Contacto: [GitHub](https://github.com/edgarSchaddai)
