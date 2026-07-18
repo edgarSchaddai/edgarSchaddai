@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: 178 contribuciones en el último año, 172 commits, 7 repositorios. Lenguajes ponderados por repositorio.">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: 5 contribuciones en el último año, 4 commits, 7 repositorios. Lenguajes ponderados por repositorio.">
   <title>Estadísticas de GitHub de Edgar Schaddaí</title>
   <style>
     text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -14,9 +14,9 @@
 
   <text class="title" x="28" y="36">Actividad</text>
   <text class="label" x="28" y="72">Contribuciones · último año</text>
-  <text class="value" x="28" y="100">178</text>
+  <text class="value" x="28" y="100">5</text>
   <text class="label" x="28" y="138">Commits</text>
-  <text class="value" x="28" y="166">172</text>
+  <text class="value" x="28" y="166">4</text>
   <text class="label" x="28" y="204">Repositorios</text>
   <text class="value" x="28" y="230">7</text>
 
