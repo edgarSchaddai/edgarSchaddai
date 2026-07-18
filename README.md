@@ -19,6 +19,13 @@ Trabajo en la intersección de la robótica, la visión por computadora y el apr
 - **M.C. Robótica** — Centro de Investigación en Matemáticas (CIMAT)
 - **Ing. Mecatrónica** — Instituto Tecnológico Superior de Jerez
 
+## Estadísticas
+
+<p>
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=edgarSchaddai&show_icons=true&count_private=true&hide_border=true&theme=transparent&locale=es" alt="Estadísticas de GitHub" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=edgarSchaddai&layout=compact&hide_border=true&theme=transparent&langs_count=8&locale=es" alt="Lenguajes más usados" />
+</p>
+
 ---
 
 📫 Contacto: [GitHub](https://github.com/edgarSchaddai)
