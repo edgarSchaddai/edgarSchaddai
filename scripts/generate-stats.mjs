@@ -22,37 +22,39 @@ async function rest(path) {
   return res.json();
 }
 
-async function graphql(query, variables) {
-  const res = await fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: HEADERS,
-    body: JSON.stringify({ query, variables }),
-  });
-  const json = await res.json();
-  if (json.errors) throw new Error(JSON.stringify(json.errors));
-  return json.data;
+// Cuenta commits del usuario en un repo desde una fecha, paginando la API REST.
+// GraphQL queda descartado: con fine-grained PATs devuelve solo la vista pública.
+async function countCommits(repoName, sinceISO) {
+  let count = 0;
+  for (let page = 1; page <= 20; page++) {
+    const res = await fetch(
+      `https://api.github.com/repos/${LOGIN}/${repoName}/commits?author=${LOGIN}&since=${sinceISO}&per_page=100&page=${page}`,
+      { headers: HEADERS }
+    );
+    if (res.status === 409) return 0; // repo vacío
+    if (!res.ok) throw new Error(`commits ${repoName} -> ${res.status}`);
+    const batch = await res.json();
+    count += batch.length;
+    if (batch.length < 100) break;
+  }
+  return count;
 }
 
 // --- Datos de actividad -----------------------------------------------------
-const data = await graphql(
-  `query ($login: String!) {
-    user(login: $login) {
-      contributionsCollection {
-        totalCommitContributions
-        contributionCalendar { totalContributions }
-      }
-      repositories(first: 100, ownerAffiliations: OWNER) { totalCount }
-    }
-  }`,
-  { login: LOGIN }
-);
-const contributions = data.user.contributionsCollection.contributionCalendar.totalContributions;
-const commits = data.user.contributionsCollection.totalCommitContributions;
-const repoCount = data.user.repositories.totalCount;
+const since = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString();
+const repos = await rest(`/user/repos?affiliation=owner&per_page=100`);
+const repoCount = repos.length;
+
+let commits = 0;
+let activeRepos = 0;
+for (const repo of repos) {
+  const c = await countCommits(repo.name, since);
+  commits += c;
+  if (c > 0) activeRepos++;
+}
 
 // --- Lenguajes ponderados por repositorio -----------------------------------
 // Cada repo pesa igual (evita que librerías vendorizadas de un solo repo dominen).
-const repos = await rest(`/user/repos?affiliation=owner&per_page=100`);
 const shares = new Map();
 let reposWithCode = 0;
 for (const repo of repos) {
@@ -98,7 +100,7 @@ function render(t) {
     })
     .join("\n");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: ${fmt(contributions)} contribuciones en el último año, ${fmt(commits)} commits, ${repoCount} repositorios. Lenguajes ponderados por repositorio.">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: ${fmt(commits)} commits en el último año, ${repoCount} repositorios, ${activeRepos} proyectos activos en el último año. Lenguajes ponderados por repositorio.">
   <title>Estadísticas de GitHub de Edgar Schaddaí</title>
   <style>
     text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -113,12 +115,12 @@ function render(t) {
   <rect x="0.5" y="0.5" width="839" height="247" rx="6" fill="${t.surface}" stroke="${t.border}"/>
 
   <text class="title" x="28" y="36">Actividad</text>
-  <text class="label" x="28" y="72">Contribuciones · último año</text>
-  <text class="value" x="28" y="100">${fmt(contributions)}</text>
-  <text class="label" x="28" y="138">Commits</text>
-  <text class="value" x="28" y="166">${fmt(commits)}</text>
-  <text class="label" x="28" y="204">Repositorios</text>
-  <text class="value" x="28" y="230">${repoCount}</text>
+  <text class="label" x="28" y="72">Commits · último año</text>
+  <text class="value" x="28" y="100">${fmt(commits)}</text>
+  <text class="label" x="28" y="138">Repositorios</text>
+  <text class="value" x="28" y="166">${repoCount}</text>
+  <text class="label" x="28" y="204">Proyectos activos · último año</text>
+  <text class="value" x="28" y="230">${activeRepos}</text>
 
   <line x1="280.5" y1="28" x2="280.5" y2="228" stroke="${t.grid}" stroke-width="1"/>
 
@@ -132,4 +134,4 @@ ${bars}
 mkdirSync("assets", { recursive: true });
 writeFileSync("assets/stats-light.svg", render(THEMES.light), "utf8");
 writeFileSync("assets/stats-dark.svg", render(THEMES.dark), "utf8");
-console.log(`OK: ${fmt(contributions)} contribuciones, ${fmt(commits)} commits, ${repoCount} repos, ${top.length} lenguajes (${reposWithCode} repos con código).`);
+console.log(`OK: ${fmt(commits)} commits/año, ${repoCount} repos, ${activeRepos} activos, ${top.length} lenguajes (${reposWithCode} repos con código).`);
