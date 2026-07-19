@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: 164 commits en el último año, 7 repositorios, 5 proyectos activos en el último año. Lenguajes ponderados por repositorio.">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-label="Estadísticas de GitHub: 169 commits en el último año, 7 repositorios, 5 proyectos activos en el último año. Lenguajes ponderados por repositorio.">
   <title>Estadísticas de GitHub de Edgar Schaddaí</title>
   <style>
     text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
@@ -14,7 +14,7 @@
 
   <text class="title" x="28" y="36">Actividad</text>
   <text class="label" x="28" y="72">Commits · último año</text>
-  <text class="value" x="28" y="100">164</text>
+  <text class="value" x="28" y="100">169</text>
   <text class="label" x="28" y="138">Repositorios</text>
   <text class="value" x="28" y="166">7</text>
   <text class="label" x="28" y="204">Proyectos activos · último año</text>
@@ -39,21 +39,21 @@
 
   <text class="lang" x="418" y="146" text-anchor="end">JavaScript</text>
   <path fill="#3987e5" d="M430,136 h245 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-245 z"/>
-  <text class="pct" x="687" y="146">13.9%</text>
+  <text class="pct" x="687" y="146">13.8%</text>
 
   <text class="lang" x="418" y="166" text-anchor="end">CSS</text>
-  <path fill="#3987e5" d="M430,156 h215 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-215 z"/>
-  <text class="pct" x="657" y="166">12.2%</text>
+  <path fill="#3987e5" d="M430,156 h213 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-213 z"/>
+  <text class="pct" x="655" y="166">12.1%</text>
 
   <text class="lang" x="418" y="186" text-anchor="end">Python</text>
-  <path fill="#3987e5" d="M430,176 h167 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-167 z"/>
-  <text class="pct" x="609" y="186">9.5%</text>
+  <path fill="#3987e5" d="M430,176 h160 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-160 z"/>
+  <text class="pct" x="602" y="186">9.1%</text>
 
   <text class="lang" x="418" y="206" text-anchor="end">HTML</text>
   <path fill="#3987e5" d="M430,196 h138 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-138 z"/>
   <text class="pct" x="580" y="206">7.9%</text>
 
   <text class="lang" x="418" y="226" text-anchor="end">Svelte</text>
-  <path fill="#3987e5" d="M430,216 h109 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-109 z"/>
-  <text class="pct" x="551" y="226">6.3%</text>
+  <path fill="#3987e5" d="M430,216 h120 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-120 z"/>
+  <text class="pct" x="562" y="226">6.9%</text>
 </svg>
